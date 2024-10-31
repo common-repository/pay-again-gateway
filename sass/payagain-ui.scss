@@ -1,0 +1,100 @@
+/**
+ *  Import
+ */
+@import 'base/variables';
+@import 'payagain-responsive.scss';
+
+/**
+ *	Checkout
+ */
+#iamport-nicepay-card-holder {
+	.wc-credit-card-form {
+		padding-top: 30px;
+		padding-bottom: 30px;
+	}
+	// Make Same Height of Chekcout Card Info Input
+	.checkout-input-row1, .checkout-input-row2 {
+		display: table; /* Make the container element behave like a table */
+		width: 100%;
+		margin: 30px 0;
+		.col {
+			display: table-cell;
+			p {
+				width: 95%;
+			}
+		}
+	}
+}
+// Hide Default Checkout Button
+.woocommerce #place_order {
+	display: none;
+}
+
+/**
+ *	Billing Method Info
+ */
+.payagain-cardpan {
+	max-width: 510px;
+	ul
+	{
+		list-style-type: none;
+		margin: 0;
+	}
+	.active {
+		border: none;
+		-webkit-box-shadow: 0px 0px 54px 8px rgba(0,0,0,0.05);
+		-moz-box-shadow: 0px 0px 54px 8px rgba(0,0,0,0.05);
+		box-shadow: 0px 0px 54px 8px rgba(0,0,0,0.05);
+		border-radius: 8px;
+		.payagain-card-name {
+			background-color: $base-color;
+			padding: 15px;
+			color: white;
+			border-radius: 8px 8px 0 0;
+		}
+		.payagain-card-details {
+			padding: 15px;
+			div {
+				display: inline-block;
+				height: 43px;
+				line-height: 43px;
+			}
+			.payagain-card-icon {
+				color: $base-color;
+				font-size: 43px;
+				vertical-align:middle;
+			}
+			.payagain-card-number {
+				margin-left: 10px;
+			}
+			.cardnum-dot {
+				margin-right: 10px;
+				.ion-record {
+					color: $base-black;
+					font-size: 10px;
+					height: 10px;
+					line-height: 10px;
+				}
+			}
+			.hidden-cardnum-message {
+				font-size: 12px;
+			}
+			.payagain-added-date {
+				color: #a1a3a3;
+				font-size: 10px;
+				height: 10px;
+				line-height: 10px;
+			}
+			.pay-again-delete-payment-button, .pay-again-delete-inicis-payment-button {
+				float: right;
+				cursor: pointer;
+				font-size: 20px;
+				color: #E43F1A;
+				text-decoration: none;
+				box-shadow: none !important;
+				height: 42px;
+				line-height: 42px;
+			}
+		}
+	}
+}
